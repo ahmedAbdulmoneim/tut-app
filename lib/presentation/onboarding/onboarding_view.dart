@@ -1,4 +1,6 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:tut/presentation/resources/color_manager.dart';
 
 class OnboardingView extends StatefulWidget {
   const OnboardingView({super.key});
@@ -10,6 +12,9 @@ class OnboardingView extends StatefulWidget {
 class _OnboardingViewState extends State<OnboardingView> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      backgroundColor: ColorManger.whit,
+      body: Center(child: Text('Onboarding screen')),
+    );
   }
 }
