@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tut/presentation/styles_manager.dart';
-import 'package:tut/presentation/values_manager.dart';
+import 'package:tut/presentation/resources/styles_manager.dart';
+import 'package:tut/presentation/resources/values_manager.dart';
 
 import 'color_manager.dart';
 import 'font_manager.dart';

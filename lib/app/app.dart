@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../presentation/theme_manager.dart';
+import '../presentation/resources/theme_manager.dart';
 
 class MyApp extends StatefulWidget {
 
