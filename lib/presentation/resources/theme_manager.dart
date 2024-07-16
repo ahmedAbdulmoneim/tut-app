@@ -36,6 +36,22 @@ ThemeData getApplicationTheme() {
           buttonColor: ColorManger.primary,
           splashColor: ColorManger.lightPrimary),
 
+      // text button
+      textButtonTheme: TextButtonThemeData(
+        style:ButtonStyle(
+          foregroundColor: MaterialStateProperty.all(ColorManger.primary), // Text color
+        //  backgroundColor: MaterialStateProperty.all(Colors.blue), // Background color
+          overlayColor: MaterialStateProperty.resolveWith<Color?>(
+                (Set<MaterialState> states) {
+              if (states.contains(MaterialState.pressed)) {
+                return ColorManger.lightPrimary; // Color when button is pressed
+              }
+              return null; // Defer to the default value
+            },
+          ),
+        ),
+      ),
+
       // elevated button theme
 
       elevatedButtonTheme: ElevatedButtonThemeData(
@@ -52,16 +68,21 @@ ThemeData getApplicationTheme() {
       // text theme
       textTheme: TextTheme(
         displayLarge:
-            getLightStyle(color: ColorManger.whit, fontSize: FontSize.s22),
+            getSemiBoldStyle(color: ColorManger.darkGrey, fontSize: FontSize.s16),
         headlineLarge: getSemiBoldStyle(
             color: ColorManger.darkGrey, fontSize: FontSize.s16),
+        headlineMedium: getRegularStyle(color: ColorManger.darkGrey,fontSize: FontSize.s14),
         titleMedium: getMediumStyle(
-            color: ColorManger.lightGrey, fontSize: FontSize.s14),
+            color: ColorManger.primary, fontSize: FontSize.s16),
         bodySmall: getRegularStyle(
           color: ColorManger.grey1,
         ),
+        titleLarge: getMediumStyle(color: ColorManger.whit,fontSize: FontSize.s16),
+
+        labelLarge: getRegularStyle(color: ColorManger.primary,fontSize: FontSize.s18),
         bodyLarge: getRegularStyle(color: ColorManger.grey),
       ),
+
 
       // input decoration theme (text form filed)
       inputDecorationTheme: InputDecorationTheme(

@@ -9,7 +9,7 @@ class ColorManger{
   // new color
 
 static Color darkPrimary = const Color(0xffd17d11);
-static Color lightPrimary = const Color(0xccd17d11); // color which opacity
+static Color lightPrimary = const Color(0xccface94); // color which opacity
 static Color grey1 = const Color(0xff707070);
 static Color grey2 = const Color(0xff797979);
 static Color whit = const Color(0xffFFFFFF);
